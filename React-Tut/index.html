@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
-    <div>
+    <div id="mydiv">
         Hello React;
     </div>
 
@@ -25,7 +25,7 @@
             } ;
         }
 
-        ReactDom.render()
+        ReactDom.render(<Hello/>, document.getElementById("mydiv"));
 
 
     </script>
