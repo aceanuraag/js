@@ -7,7 +7,20 @@
 </head>
 <body>
     <script type="text/javascript">
+        function MyFun(){
+
         
+            var userconfirmbox = confirm("Do you to visit the website?");
+            if(userconfirmbox == true){
+                window.open("https://www.flipkart.com/")
+                return true;
+            }else{
+                document.write()
+                return false;
+            }
+
+       }
     </script>
+    <input type="button" name="" onclick="MyFun()" value="Click Me"/>
 </body>
 </html>
