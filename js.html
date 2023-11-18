@@ -22,7 +22,7 @@
         <br/>
 
         <input type="text" name = "" id="choices">
-        
+
         <br/>
 
         <button type="submit" onclick="Func()" >Click Me</button>
@@ -38,8 +38,9 @@
         function Func() {
 
             var choice = document.getElementById("choices").value;
+            var choice1 = document.getElementById("choices").value;
 
-            alert(choice);
+            alert(choice   + choice1); // here "+" come with error;
         
 
         }
