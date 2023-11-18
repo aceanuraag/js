@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>javascript Function</title>
     <style type="text/css">
 
     </style>
@@ -11,17 +11,40 @@
 <body>
 
 
+    <form method="post" action>
+        <h3>Enter your choice</h3>
+        <ul>
+            <li>add</li>
+            <li>subs</li>
+            <li>Mul</li>
+        </ul>
+
+        <br/>
+
+        <input type="text" name = "" id="choices">
+        
+        <br/>
+
+        <button type="submit" onclick="Func()" >Click Me</button>
+
+    </form>
+
+
     <script type="text/javascript">
+        
 
-        marks = 500;
+        // alert("Your results are showing in few minutes");
 
-        alert("Your results are showing in few minutes");
+        function Func() {
 
-        if(marks <= 100){
-            onClick(document.write("YOur are pass"));
-        }else{
-            document.write("Fail");
+            var choice = document.getElementById("choices").value;
+
+            alert(choice);
+        
+
         }
+
+        
 
         
     
