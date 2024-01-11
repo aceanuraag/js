@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      transition: background-color 0.3s;
+    }
+
+    section {
+      margin-top: 60px; /* Adjust margin to avoid content being hidden under the header */
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="sticky-header">
+    <h1>Sticky Header</h1>
+  </header>
+
+  <section>
+    <p>This is some content. Scroll down to see the header become sticky!</p>
+  </section>
+
+  <script>
+    window.onscroll = function() {
+      makeHeaderSticky();
+    };
+
+    function makeHeaderSticky() {
+      const header = document.getElementById("sticky-header");
+      const sticky = header.offsetTop;
+
+      if (window.pageYOffset > sticky) {
+        header.style.backgroundColor = "#555";
+      } else {
+        header.style.backgroundColor = "#333";
+      }
+    }
+  </script>
+
+</body>
+</html>
