@@ -6,10 +6,27 @@
     <title>Array in javascript</title>
 </head>
 <body>
+
     <script type="text/javascript">
-        const name = ["Anurag","Anjali","somaya","Ragani"];
-        console.log(name);
-        document.write("  "+name);
-    </script>"
+       const student = new Array("Anurag","Manoj",'Pankaj','suresh')
+        //    for (let index = 0; index < student.length; index++) {
+        //       document.write(student[index]+"<br/>") ;  
+        //    }
+        // document.write(student.join("\n")) ;
+        // documet.write(student.pop(1));
+         document.write(student.push("mishra" ));
+        //  document.write("<br/>")
+        // document.write(student.pop());
+        document.write(student.sort());
+
+        function test(a,b){
+            return alert( a * b);
+        }
+
+
+
+        // document.write(test(20,10));
+    </script>
+        <button type="button" onclick="test()">Click me</button>
 </body>
 </html>
