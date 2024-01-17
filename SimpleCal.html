@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    First number: <input type="number" name="num1" id="num1" />
+    <br />
+    <br />
+    Second number: <input type="number" name="num2" id="num2" />
+    <br />
+    <br />
+
+    <button onclick="AddNum()">Add 2 numbers</button>
+
+    <script defer >
+      function AddNum() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        alert(num1 + num2);
+      }
+      document.write("<br />");
+      document.write("<br />");
+      document.write(Date());
+    </script>
+  </body>
+</html>
