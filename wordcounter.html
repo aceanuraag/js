@@ -1,0 +1,73 @@
+<!-- This line declares the document type and version of HTML being used -->
+<!DOCTYPE html>
+
+<!-- This section defines the HTML document and sets the language to English -->
+<html lang="en">
+  <!-- This section contains metadata about the document, such as character set and viewport settings -->
+  <head>
+    <!-- This tag specifies the character encoding for the document as UTF-8 -->
+    <meta charset="UTF-8" />
+
+    <!-- This tag sets the viewport properties for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- This tag sets the title of the HTML document that appears on the browser tab -->
+    <title>Word Counter</title>
+  </head>
+
+  <!-- This section contains the content of the HTML document -->
+  <body>
+    <!-- This label is associated with the textarea using 'for' attribute -->
+    <label for="textInput">Enter Text:</label>
+
+    <!-- This textarea provides a space for the user to input text -->
+    <textarea id="textInput" rows="4" cols="50"></textarea>
+
+    <!-- Line break for better formatting -->
+    <br />
+
+    <!-- This button, when clicked, triggers the countWords function -->
+    <button onclick="countWords()">Count Words</button>
+
+    <!-- This paragraph will display the word count result -->
+    <p id="result">Word count will be displayed here.</p>
+
+    <!-- This script tag contains JavaScript code that will be executed -->
+    <script defer>
+      //    This function counts words when called
+      function countWords() {
+        // Get the textarea element by its id
+        const textInput = document.getElementById("textInput");
+
+        // <!-- Get the paragraph element by its id to display the result -->
+        const resultElement = document.getElementById("result");
+
+        // <!-- Retrieve the text entered in the textarea -->
+        const text = textInput.value;
+
+        // <!-- Call the calculateWordCount function to get the word count -->
+        const wordCount = calculateWordCount(text);
+
+        // <!-- Display the word count in the result paragraph -->
+        resultElement.textContent = `Word count: ${wordCount}`;
+      }
+
+      //   <!-- This function calculates the word count of the given text -->
+      function calculateWordCount(text) {
+        // <!-- Remove leading and trailing whitespaces from the text -->
+        const trimmedText = text.trim();
+
+        // <!-- If the trimmed text is empty, return 0 as word count -->
+        if (trimmedText === "") {
+          return 0;
+        }
+
+        // <!-- Split the trimmed text into words using regular expression -->
+        const words = trimmedText.split(/\s+/);
+
+        // <!-- Return the length of the words array as the word count -->
+        return words.length;
+      }
+    </script>
+  </body>
+</html>
