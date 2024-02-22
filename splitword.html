@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Splitting Example</title>
+</head>
+<body>
+
+  <!-- An input field and a button for demonstration purposes -->
+  <label for="inputString">Enter a string:</label>
+  <input type="text" id="inputString">
+  <button onclick="splitString()">Split String</button>
+
+  <!-- A paragraph to display the result -->
+  <p id="result">Result will be displayed here.</p>
+
+  <!-- Script tag to include JavaScript code -->
+  <script>
+    // Function to be triggered when the button is clicked
+    function splitString() {
+      // Get the input element by its id
+      const inputElement = document.getElementById("inputString");
+
+      // Get the value (text) entered in the input field
+      const inputText = inputElement.value;
+
+      // Split the text into an array using a comma as the delimiter
+      const stringArray = inputText.split(',');
+
+      // Display the resulting array in the paragraph
+      document.getElementById("result").textContent = `Resulting Array: ${JSON.stringify(stringArray)}`;
+    }
+  </script>
+
+</body>
+</html>

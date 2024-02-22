@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+  </head>
+  <body>
+    <script defer>
+      function person(first, last, age, gender) {
+        this.first = first;
+        this.last = last;
+        this.gender = gender;
+        this.age = age;
+        this.gender = gender;
+      }
+
+      const my = person("Anurag", "Mundra", 34, "M");
+      document.write(this.first + " " + this.last);
+    </script>
+  </body>
+</html>

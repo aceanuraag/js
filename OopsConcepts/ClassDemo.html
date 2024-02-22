@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS Concepts</title>
+</head>
+<body>
+    <script >
+        class Students{
+
+            constructor(name,city){
+                this.name = name;
+                this.city = city
+            }
+            
+            studentinfo(name,email,mobile,city){
+              document.write(name +" "+ email +" "+ mobile +" "+city);
+            }
+            
+        }
+       var sk = new Students("Anurag","Nedal");
+       sk.studentinfo(sk.name,"anusrivas07@gmail.com","943063288",sk.city);
+    </script>
+</body>
+</html>
