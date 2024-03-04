@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="justify-content: center;"> 
+    <button onclick="clearInterval(clock)">Click me</button><br /><br />
+    <p id="slowClock"></p>
+    <script defer>
+      var clock = setInterval(clocktimeing, 1000);
+      function clocktimeing() {
+        var d = new Date();
+        var th = d.toLocaleTimeString();
+        document.getElementById("slowClock").innerHTML = th;
+      }
+    </script>
+    </div>
+  </body>
+</html>
